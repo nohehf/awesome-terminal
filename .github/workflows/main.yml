@@ -22,7 +22,7 @@ jobs:
       run: |
         rm -rf assets
         mv .vuepress/dist/* .
-        git add -a
+        git add -A
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "deploy vuepress"
