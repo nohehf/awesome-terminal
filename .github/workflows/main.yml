@@ -1,5 +1,6 @@
 name: Deploy to GitHub pages
 on:
+  workflow_dispatch:
   push:
     # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
     branches: [ master ]
