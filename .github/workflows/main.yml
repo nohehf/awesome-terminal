@@ -1,5 +1,6 @@
 name: Deploy to GitHub pages
 on:
+  workflow_dispatch:
   push:
     # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
     branches: [ master ]
@@ -14,8 +15,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - run: npm ci
-    - run: npm run build
+    - run: npm i
+    - run: npm run vuepress build
 
     - name: Init new repo in dist folder and commit generated files
       run: |
@@ -31,6 +32,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
-        branch: vuepress
+        branch: master
         force: true
-        directory: .vuepress/dist
+        directory: ./
