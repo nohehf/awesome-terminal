@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: '16.x'
     - run: npm i
-    - run: npm run vuepress build
+    - run: npx vuepress build
 
     - name: Init new repo in dist folder and commit generated files
       run: |
