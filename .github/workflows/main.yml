@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - run: nnpm i pnpm
+    - run: npm i pnpm
     - run: pnpm i
     - run: pnpm vuepress build
 
