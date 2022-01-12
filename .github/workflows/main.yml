@@ -15,9 +15,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - run: npm i pnpm
-    - run: pnpm i
-    - run: pnpm vuepress build
+    - run: npm i
+    - run: npm run vuepress build
 
     - name: Init new repo in dist folder and commit generated files
       run: |
