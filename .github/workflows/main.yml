@@ -20,6 +20,7 @@ jobs:
 
     - name: Init new repo in dist folder and commit generated files
       run: |
+        rm -rf 404.html index.html assets
         mv .vuepress/dist/* .
         git add -a
         git config --local user.email "action@github.com"
