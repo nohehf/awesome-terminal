@@ -1,8 +1,8 @@
-# awsome-terminal
+# awsome-terminal :rainbow:
 ![terminal.png](https://github.com/nohehf/awsome-terminal/blob/main/terminal.png?raw=true)
 This is a quick guide to set up an awesome terminal that will change your life (or not but its definitely worth the try).
 After completing the following your terminal will have:
-- Awsome theme (colors) & more syntax coloring
+- Awsome theme (colors) & more syntax coloring with minimalist style
 - Icons
 - Live git status in the command line (status, branch...)
 - Auto-suggestion while typing commands
