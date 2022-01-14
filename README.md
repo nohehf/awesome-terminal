@@ -66,7 +66,7 @@ sh -c "$(curl -fsSL <https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 First refresh zsh with `exec zsh`
 Then run the following commands to install powerlevel10k:
 ```bash
-git clone --depth=1 <https://github.com/romkatv/powerlevel10k.git> ~/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 *note: if you have any issue installing it please refer to [powerlevel10k official repo](https://github.com/romkatv/powerlevel10k)*
@@ -74,11 +74,11 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 #### Auto-suggestions & syntax highlighting:
 Run the following command to install `zsh-autosuggestions`:
 ```bash
-git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 Run the following command to install `zsh-syntax-highlighting`:
 ```bash
-git clone <https://github.com/zsh-users/zsh-syntax-highlighting.git> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 #### .zshrc
 Now that you have zsh replacing bash your `.bashrc` is replaced by `.zshrc`
@@ -102,7 +102,7 @@ To manage your GitHub repos I recommend using the gh cli, it allows you to easil
  you can install it and authenticate to your account with the following commands:
  ```bash
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-sudo apt-add-repository <https://cli.github.com/packages>
+sudo apt-add-repository https://cli.github.com/packages
 sudo apt update
 sudo apt install gh
 gh auth login
@@ -112,7 +112,7 @@ gh auth login
 If you use nodejs I **strongly** recommend using pnpm both as a packet manager (instead of yarn or npm) and a node version manager. It is super fast for package managing, good for global installs, and the version manager allows you to switch node versions without the pain. It's also fully compatible with npm so no worries if your co-workers don't use it (yet)
 To install it and enable node lts as default run the following commands:
 ```bash
-curl -fsSL [<https://get.pnpm.io/install.sh>](<https://get.pnpm.io/install.sh>) | sh -
+curl -fsSL https://get.pnpm.io/install.sh] | sh -
 sudo pnpm env use --global lts
 ```
 Then refer to the [pnpm docs](https://pnpm.io/motivation) to use it (but it's most likely like npm).
