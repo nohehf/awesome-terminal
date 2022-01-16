@@ -58,7 +58,7 @@ sudo apt install git zsh -y
 #### ohmyzsh
 Run the following to install ohmyzsh:
 ```bash
-sh -c "$(curl -fsSL <https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh>)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 *note: if you have any issue installing it please refer to [ohmyzsh official website](https://ohmyz.sh/)*
 
