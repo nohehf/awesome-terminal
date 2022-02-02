@@ -12,7 +12,21 @@ After completing the following your terminal will have:
 
 *Please note that this guide is strongly opinionated, as it is my setup, but you can still customize it a lot afterward don't worry.*
 
-For windows, I recommend using wsl2 + windows terminal (download it in the Microsoft store).
+For **windows**, I recommend using wsl2 + windows terminal (download it in the Microsoft store).
+
+For **macOs**, I recommend using Iterm2, coping the app in two versions, one for arm64 and one with rosetta.
+you can then add different commands depending on the architecture in your `.zshrc` like here with pnpm for arm64 and nvm for rosetta (feel free to put anythig in the if statement, this is just an example):
+```BASH
+if [ $(arch) = "arm64" ]
+then
+  export PNPM_HOME="/Users/nohehf/Library/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+else
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+```
 
 ### Customizing your terminal emulator
 First, you can set up your preferred terminal theme & font:  
@@ -72,6 +86,8 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 *note: if you have any issue installing it please refer to [powerlevel10k official repo](https://github.com/romkatv/powerlevel10k)*
 
 #### Auto-suggestions & syntax highlighting:
+*note: for macOs I strongly reccomand using fig instead of zsh-autosuggestions* : [see Fig](https://fig.io/).  
+
 Run the following command to install `zsh-autosuggestions`:
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
